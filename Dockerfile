@@ -19,8 +19,6 @@ COPY . /app/
 # Exponha a porta que a aplicação usará
 EXPOSE 8000
 
-# Rodar o script de inicialização do banco de dados
-CMD ["python", "app/init_db.py"]
-
-# Comando para rodar a aplicação com Uvicorn
-CMD ["poetry", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Inicializar banco e executar aplicação
+CMD poetry run python -m app.init_db && \
+    poetry run uvicorn app.main:app --host 0.0.0.0 --port 8000

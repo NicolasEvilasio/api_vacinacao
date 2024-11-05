@@ -10,6 +10,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     
+    environment: ${{ startsWith(github.ref, 'refs/heads/staging/') && 'staging' || 'production' }}
+    
     env:
       ENVIRONMENT: ${{ startsWith(github.ref, 'refs/heads/staging/') && 'staging' || 'production' }}
     

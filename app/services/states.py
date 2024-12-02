@@ -23,8 +23,8 @@ class StateService:
         self.repository = repository
         self.country_repository = CountryRepository(self.repository.database)
 
-    async def get_all_states(self, id: int | None = None, ibge_code: str | None = None) -> List[Dict]:
-        return await self.repository.get_all(id=id, ibge_code=ibge_code)
+    async def get_all_states(self, id: int | None = None, name: str | None = None, ibge_code: str | None = None) -> List[Dict]:
+        return await self.repository.get_all(id=id, name=name, ibge_code=ibge_code)
 
     async def create_state(self, state: StateCreate) -> Dict:
         # Verifica se o país existe

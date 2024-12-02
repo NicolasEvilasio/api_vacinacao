@@ -20,11 +20,13 @@ class StateRepository:
     def __init__(self, database: Database):
         self.database = database
 
-    async def get_all(self, id: int | None = None, ibge_code: str | None = None) -> List[State]:
+    async def get_all(self, id: int | None = None, name: str | None = None, ibge_code: str | None = None) -> List[State]:
         query = select(State)
         
         if id is not None:
             query = query.where(State.id == id)
+        if name is not None:
+            query = query.where(State.name.ilike(f"%{name}%"))
         if ibge_code is not None:
             query = query.where(State.ibge_code == ibge_code)
             

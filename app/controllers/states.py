@@ -10,7 +10,7 @@ Controllers should not contain business logic, only HTTP request
 handling logic.
 """
 
-from fastapi import APIRouter, Depends, Request, Form
+from fastapi import APIRouter, Depends, Request, Form, Query
 from typing import Annotated
 from app.schemas.states import StateCreate
 from app.services.states import StateService
@@ -23,16 +23,27 @@ router = APIRouter()
     "/states",
     tags=["Estados"],
     summary="Listar estados",
-    description="Retorna todos os estados cadastrados"
+    description="""
+    Retorna a lista de estados cadastrados.
+    
+    Filtros disponíveis:
+    * ID do estado
+    * Nome do estado (busca parcial, não sensível a maiúsculas/minúsculas)
+    * Código IBGE
+    
+    Se nenhum filtro for fornecido, retorna todos os estados.
+    """,
+    response_description="Lista de estados"
 )
 @limiter.limit("10/minute")
 async def get_states(
     request: Request,
-    id: int | None = None,
-    ibge_code: str | None = None,
+    id: int | None = Query(None, description="ID do estado"),
+    name: str | None = Query(None, description="Nome do estado (busca parcial)"),
+    ibge_code: str | None = Query(None, description="Código IBGE do estado"),
     service: StateService = Depends(get_state_service)
 ):
-    return await service.get_all_states(id=id, ibge_code=ibge_code)
+    return await service.get_all_states(id=id, name=name, ibge_code=ibge_code)
 
 @router.post(
     "/states",

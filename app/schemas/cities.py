@@ -50,3 +50,33 @@ class CityResponse(BaseModel):
     ibge_code: str | None
     created_at: datetime
     
+class CityUpdate(BaseModel):
+    name: str | None = Field(
+        None, 
+        min_length=1,
+        max_length=255,
+        description="Nome da cidade",
+        example="Maceió"
+    )
+    state_id: int | None = Field(
+        None,
+        description="ID do estado ao qual a cidade pertence",
+        gt=0,
+        example=1
+    )
+    ibge_code: str | None = Field(
+        None, 
+        max_length=50,
+        description="Código IBGE da cidade",
+        example="2704302"
+    )
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "Maceió",
+                "state_id": 1,
+                "ibge_code": "2704302"
+            }
+        }
+    

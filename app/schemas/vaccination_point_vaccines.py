@@ -14,18 +14,20 @@ from pydantic import BaseModel, Field
 
     
 class VaccinationPointVaccineCreate(BaseModel):
-    vaccination_point_id: int = Field(
-        ..., 
-        description="Vaccination point id",
-        gt=0
-    )
     vaccine_id: int = Field(
-        ..., 
-        description="Vaccine id",
-        gt=0
+        ...,
+        description="ID da vacina",
+        gt=0,
+        example=1
     )
 
-    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "vaccine_id": 1
+            }
+        }
+
 class VaccinationPointVaccineResponse(BaseModel):
     id: int 
     vaccination_point_id: int

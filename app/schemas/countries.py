@@ -42,3 +42,26 @@ class CountryResponse(BaseModel):
     ibge_code: str | None
     created_at: datetime
     
+class CountryUpdate(BaseModel):
+    name: str | None = Field(
+        None, 
+        min_length=1,
+        max_length=255,
+        description="Nome do país",
+        example="Brasil"
+    )
+    ibge_code: str | None = Field(
+        None, 
+        max_length=50,
+        description="Código IBGE do país",
+        example="1058"
+    )
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "Brasil",
+                "ibge_code": "1058"
+            }
+        }
+    

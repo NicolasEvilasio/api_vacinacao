@@ -50,3 +50,33 @@ class StateResponse(BaseModel):
     ibge_code: str | None
     created_at: datetime
     
+class StateUpdate(BaseModel):
+    name: str | None = Field(
+        None, 
+        min_length=1,
+        max_length=255,
+        description="Nome do estado",
+        example="Alagoas"
+    )
+    country_id: int | None = Field(
+        None,
+        description="ID do país ao qual o estado pertence",
+        gt=0,
+        example=1
+    )
+    ibge_code: str | None = Field(
+        None, 
+        max_length=50,
+        description="Código IBGE do estado",
+        example="27"
+    )
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "Alagoas",
+                "country_id": 1,
+                "ibge_code": "27"
+            }
+        }
+    

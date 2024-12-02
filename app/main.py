@@ -18,7 +18,8 @@ from app.controllers import (
     countries, 
     states,
     cities,
-    vaccination_points
+    vaccination_points,
+    vaccines
 )
 from app.config import limiter, logger
 from slowapi.errors import RateLimitExceeded
@@ -64,3 +65,4 @@ app.include_router(countries.router)
 app.include_router(states.router)
 app.include_router(cities.router)
 app.include_router(vaccination_points.router)
+app.include_router(vaccines.router)

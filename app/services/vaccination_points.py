@@ -20,8 +20,8 @@ class VaccinationPointService:
     def __init__(self, repository: VaccinationPointRepository):
         self.repository = repository
 
-    async def get_all_vaccination_points(self, city_id: int | None = None) -> List[Dict]:
-        return await self.repository.get_all(city_id=city_id)
+    async def get_all_vaccination_points(self, id: int | None = None, name: str | None = None, city_id: int | None = None) -> List[Dict]:
+        return await self.repository.get_all(id=id, name=name, city_id=city_id)
 
     async def create_vaccination_point(self, vaccination_point: VaccinationPointCreate) -> Dict:
         last_record_id = await self.repository.create(

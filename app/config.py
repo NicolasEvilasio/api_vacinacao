@@ -35,9 +35,11 @@ class Settings(BaseSettings):
     # Configuração SQLite
     SQLITE_DB_NAME: str = os.getenv("SQLITE_DB_NAME", "database.db")
 
+    # Configuração de URLs
+    PRODUCTION_URL: str = os.getenv("PRODUCTION_URL", "")
+
     class Config:
         env_file = ".env"
-        case_sensitive = True
 
 settings = Settings()
 

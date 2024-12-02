@@ -15,6 +15,7 @@ only business rules.
 from app.repositories.vaccination_point_vaccines import VaccinationPointVaccineRepository
 from app.schemas.vaccination_point_vaccines import VaccinationPointVaccineCreate
 from typing import List, Dict
+from fastapi import HTTPException
 
 class VaccinationPointVaccineService:
     def __init__(self, repository: VaccinationPointVaccineRepository):
@@ -79,3 +80,27 @@ class VaccinationPointVaccineService:
             })
         
         return list(organized_results.values())
+
+    async def add_vaccine_to_point(self, vaccination_point_id: int, data: VaccinationPointVaccineCreate) -> Dict:
+        # Aqui você pode adicionar validações adicionais se necessário
+        last_record_id = await self.repository.create(
+            vaccination_point_id=vaccination_point_id,
+            vaccine_id=data.vaccine_id
+        )
+        return {"id": last_record_id, "message": "Vacina adicionada ao ponto com sucesso"}
+
+    async def remove_vaccine_from_point(
+        self,
+        vaccination_point_id: int,
+        vaccine_id: int
+    ) -> Dict:
+        success = await self.repository.delete(
+            vaccination_point_id=vaccination_point_id,
+            vaccine_id=vaccine_id
+        )
+        if not success:
+            raise HTTPException(
+                status_code=404,
+                detail="Relacionamento entre ponto de vacinação e vacina não encontrado"
+            )
+        return {"message": "Vacina removida do ponto com sucesso"}

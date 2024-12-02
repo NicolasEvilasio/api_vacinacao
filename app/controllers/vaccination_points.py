@@ -17,6 +17,7 @@ from app.services.vaccination_points import VaccinationPointService
 from app.services.vaccination_point_vaccines import VaccinationPointVaccineService
 from app.dependencies import get_vaccination_point_service, get_vaccination_point_vaccine_service
 from app.config import limiter
+from app.schemas.vaccination_point_vaccines import VaccinationPointVaccineCreate
 
 router = APIRouter()
 
@@ -146,3 +147,32 @@ async def get_points_by_vaccine(
     service: VaccinationPointVaccineService = Depends(get_vaccination_point_vaccine_service)
 ):
     return await service.get_points_by_vaccine(vaccine_id)
+
+@router.post(
+    "/vaccination-points/{vaccination_point_id}/vaccines",
+    tags=["Pontos de Vacinação"],
+    summary="Adicionar vacina ao ponto",
+    description="Adiciona uma vacina a um ponto de vacinação específico",
+    response_description="Vacina adicionada com sucesso",
+    status_code=201
+)
+async def add_vaccine_to_point(
+    vaccination_point_id: int,
+    vaccine: VaccinationPointVaccineCreate,
+    service: VaccinationPointVaccineService = Depends(get_vaccination_point_vaccine_service)
+):
+    return await service.add_vaccine_to_point(vaccination_point_id, vaccine)
+
+@router.delete(
+    "/vaccination-points/{vaccination_point_id}/vaccines/{vaccine_id}",
+    tags=["Pontos de Vacinação"],
+    summary="Remover vacina do ponto",
+    description="Remove uma vacina de um ponto de vacinação específico",
+    response_description="Vacina removida com sucesso"
+)
+async def remove_vaccine_from_point(
+    vaccination_point_id: int,
+    vaccine_id: int,
+    service: VaccinationPointVaccineService = Depends(get_vaccination_point_vaccine_service)
+):
+    return await service.remove_vaccine_from_point(vaccination_point_id, vaccine_id)

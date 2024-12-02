@@ -20,11 +20,13 @@ class CountryRepository:
     def __init__(self, database: Database):
         self.database = database
 
-    async def get_all(self, id: int | None = None, ibge_code: str | None = None) -> List[Country]:
+    async def get_all(self, id: int | None = None, name: str | None = None, ibge_code: str | None = None) -> List[Country]:
         query = select(Country)
         
         if id is not None:
             query = query.where(Country.id == id)
+        if name is not None:
+            query = query.where(Country.name.ilike(f"%{name}%"))
         if ibge_code is not None:
             query = query.where(Country.ibge_code == ibge_code)
         

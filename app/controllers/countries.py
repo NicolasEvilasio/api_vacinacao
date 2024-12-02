@@ -24,42 +24,26 @@ router = APIRouter()
     tags=["Países"],
     summary="Listar países",
     description="""
-    Retorna todos os países cadastrados.
+    Retorna a lista de países cadastrados.
     
-    É possível filtrar por:
+    Filtros disponíveis:
     * ID do país
-    * Código IBGE do país
+    * Nome do país (busca parcial, não sensível a maiúsculas/minúsculas)
+    * Código IBGE
     
     Se nenhum filtro for fornecido, retorna todos os países.
     """,
-    response_description="Lista de países encontrados",
-    responses={
-        200: {
-            "description": "Sucesso",
-            "content": {
-                "application/json": {
-                    "example": [{
-                        "id": 1,
-                        "name": "Brasil",
-                        "ibge_code": "1058",
-                        "created_at": "2024-01-01T00:00:00"
-                    }]
-                }
-            }
-        },
-        429: {
-            "description": "Muitas requisições - Aguarde antes de tentar novamente"
-        }
-    }
+    response_description="Lista de países"
 )
 @limiter.limit("10/minute")
 async def get_countries(
     request: Request,
     id: int | None = Query(None, description="ID do país"),
+    name: str | None = Query(None, description="Nome do país (busca parcial)"),
     ibge_code: str | None = Query(None, description="Código IBGE do país"),
     service: CountryService = Depends(get_country_service)
 ):
-    return await service.get_all_countries(id=id, ibge_code=ibge_code)
+    return await service.get_all_countries(id=id, name=name, ibge_code=ibge_code)
 
 @router.post(
     "/countries",

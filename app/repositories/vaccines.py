@@ -20,11 +20,13 @@ class VaccineRepository:
     def __init__(self, database: Database):
         self.database = database
 
-    async def get_all(self, id: int | None = None) -> List[Vaccine]:
+    async def get_all(self, id: int | None = None, name: str | None = None) -> List[Vaccine]:
         query = select(Vaccine)
         
         if id is not None:
             query = query.where(Vaccine.id == id)
+        if name is not None:
+            query = query.where(Vaccine.name.ilike(f"%{name}%"))
         
         return await self.database.fetch_all(query)
 

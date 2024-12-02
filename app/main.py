@@ -21,7 +21,7 @@ from app.controllers import (
     vaccination_points,
     vaccines
 )
-from app.config import limiter, logger
+from app.config import limiter, logger, settings
 from slowapi.errors import RateLimitExceeded
 from slowapi import _rate_limit_exceeded_handler
 
@@ -55,6 +55,10 @@ app = FastAPI(
     version="1.1.0",
     lifespan=lifespan,
     servers=[
+        {
+            "url": settings.PRODUCTION_URL,
+            "description": "Production Server"
+        },
         {
             "url": "http://localhost:8000",
             "description": "Local Development Server"

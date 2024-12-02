@@ -52,7 +52,7 @@ app = FastAPI(
     
     Todos os dados são fictícios.
     """,
-    version="1.0.0",
+    version="1.1.0",
     lifespan=lifespan
 )
 

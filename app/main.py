@@ -53,7 +53,35 @@ app = FastAPI(
     Todos os dados são fictícios.
     """,
     version="1.1.0",
-    lifespan=lifespan
+    lifespan=lifespan,
+    servers=[
+        {
+            "url": "http://localhost:8000",
+            "description": "Local Development Server"
+        }
+    ],
+    openapi_tags=[
+        {
+            "name": "Países",
+            "description": "Gerenciamento de países"
+        },
+        {
+            "name": "Estados",
+            "description": "Gerenciamento de estados"
+        },
+        {
+            "name": "Cidades",
+            "description": "Gerenciamento de cidades"
+        },
+        {
+            "name": "Pontos de Vacinação",
+            "description": "Gerenciamento de pontos de vacinação"
+        },
+        {
+            "name": "Vacinas",
+            "description": "Gerenciamento de vacinas"
+        }
+    ]
 )
 
 # Rate limiter configuration

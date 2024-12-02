@@ -18,9 +18,16 @@ class VaccineCreate(BaseModel):
         ..., 
         min_length=1,
         max_length=255,
-        description="Vaccine name"
+        description="Nome da vacina",
+        example="BCG"
     )
-
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "BCG"
+            }
+        }
     
 class VaccineResponse(BaseModel):
     id: int

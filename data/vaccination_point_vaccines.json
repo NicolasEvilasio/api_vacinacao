@@ -1,0 +1,42 @@
+[
+    {
+        "vaccination_point_id": 1,
+        "vaccine_id": 1
+    },
+    {
+        "vaccination_point_id": 1,
+        "vaccine_id": 2
+    },
+    {
+        "vaccination_point_id": 1,
+        "vaccine_id": 3
+    },
+    {
+        "vaccination_point_id": 1,
+        "vaccine_id": 4
+    },
+    {
+        "vaccination_point_id": 2,
+        "vaccine_id": 1
+    },
+    {
+        "vaccination_point_id": 2,
+        "vaccine_id": 2
+    },
+    {
+        "vaccination_point_id": 2,
+        "vaccine_id": 3
+    },
+    {
+        "vaccination_point_id": 3,
+        "vaccine_id": 1
+    },
+    {
+        "vaccination_point_id": 3,
+        "vaccine_id": 2
+    },
+    {
+        "vaccination_point_id": 4,
+        "vaccine_id": 1
+    }
+] 

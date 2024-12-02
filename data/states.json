@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Alagoas",
+        "country_id": 1,
+        "ibge_code": "27"
+    },
+    {
+        "name": "Bahia",
+        "country_id": 1,
+        "ibge_code": "29"
+    },
+    {
+        "name": "Ceará",
+        "country_id": 1,
+        "ibge_code": "23"
+    },
+    {
+        "name": "Pernambuco",
+        "country_id": 1,
+        "ibge_code": "26"
+    },
+    {
+        "name": "Paraíba",
+        "country_id": 1,
+        "ibge_code": "25"
+    },
+    {
+        "name": "Rio Grande do Norte",
+        "country_id": 1,
+        "ibge_code": "24"
+    },
+    {
+        "name": "Sergipe",
+        "country_id": 1,
+        "ibge_code": "28"
+    },
+    {
+        "name": "Maranhão",
+        "country_id": 1,
+        "ibge_code": "21"
+    },
+    {
+        "name": "Piauí",
+        "country_id": 1,
+        "ibge_code": "22"
+    }
+] 

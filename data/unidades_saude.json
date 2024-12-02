@@ -1,0 +1,324 @@
+[
+    {
+      "name": "Unidade Básica de Saúde Ponta Verde",
+      "type": "UBS",
+      "schedules": [
+        { "start": "08:00:00", "end": "17:00:00", "weekday": "monday" },
+        { "start": "08:00:00", "end": "17:00:00", "weekday": "tuesday" },
+        { "start": "08:00:00", "end": "17:00:00", "weekday": "wednesday" },
+        { "start": "08:00:00", "end": "17:00:00", "weekday": "thursday" },
+        { "start": "08:00:00", "end": "16:00:00", "weekday": "friday" }
+      ],
+      "full_address": "Rua Desembargador Valente de Lima, 123",
+      "neighborhood": "Ponta Verde",
+      "city": "Maceió",
+      "state": "AL",
+      "zip_code": "57035-510",
+      "phone": "(82) 3221-1234",
+      "email": "contato.pontaverde@saude.maceio.gov.br",
+      "website": "http://www.ubs-pontaverde.saude.maceio.gov.br",
+      "latitude": -9.663562,
+      "longitude": -35.708656
+    },
+    {
+      "name": "Clínica da Família Jacintinho",
+      "type": "Clínica da Família",
+      "schedules": [
+        { "start": "07:00:00", "end": "19:00:00", "weekday": "monday" },
+        { "start": "07:00:00", "end": "19:00:00", "weekday": "tuesday" },
+        { "start": "07:00:00", "end": "19:00:00", "weekday": "wednesday" },
+        { "start": "07:00:00", "end": "19:00:00", "weekday": "thursday" },
+        { "start": "07:00:00", "end": "18:00:00", "weekday": "friday" }
+      ],
+      "full_address": "Avenida Comendador Leão, 456",
+      "neighborhood": "Jacintinho",
+      "city": "Maceió",
+      "state": "AL",
+      "zip_code": "57041-090",
+      "phone": "(82) 3333-4567",
+      "email": "contato.jacintinho@saude.maceio.gov.br",
+      "website": "http://www.clinica-jacintinho.saude.maceio.gov.br",
+      "latitude": -9.655375,
+      "longitude": -35.727545
+    },
+    {
+      "name": "Hospital Geral do Trapiche",
+      "type": "Hospital",
+      "schedules": [
+        { "start": "00:00:00", "end": "23:59:59", "weekday": "monday" },
+        { "start": "00:00:00", "end": "23:59:59", "weekday": "tuesday" },
+        { "start": "00:00:00", "end": "23:59:59", "weekday": "wednesday" },
+        { "start": "00:00:00", "end": "23:59:59", "weekday": "thursday" },
+        { "start": "00:00:00", "end": "23:59:59", "weekday": "friday" },
+        { "start": "00:00:00", "end": "23:59:59", "weekday": "saturday" },
+        { "start": "00:00:00", "end": "23:59:59", "weekday": "sunday" }
+      ],
+      "full_address": "Rua Doutor Mário Nunes Vieira, 789",
+      "neighborhood": "Trapiche da Barra",
+      "city": "Maceió",
+      "state": "AL",
+      "zip_code": "57010-260",
+      "phone": "(82) 3214-7890",
+      "email": "contato.trapiche@saude.maceio.gov.br",
+      "website": "http://www.hospital-trapiche.saude.maceio.gov.br",
+      "latitude": -9.673413,
+      "longitude": -35.736716
+    },
+    {
+      "name": "Centro de Saúde Benedito Bentes",
+      "type": "Centro de Saúde",
+      "schedules": [
+        { "start": "08:00:00", "end": "18:00:00", "weekday": "monday" },
+        { "start": "08:00:00", "end": "18:00:00", "weekday": "tuesday" },
+        { "start": "08:00:00", "end": "18:00:00", "weekday": "wednesday" },
+        { "start": "08:00:00", "end": "18:00:00", "weekday": "thursday" },
+        { "start": "08:00:00", "end": "16:00:00", "weekday": "friday" }
+      ],
+      "full_address": "Rua São Benedito, 150",
+      "neighborhood": "Benedito Bentes",
+      "city": "Maceió",
+      "state": "AL",
+      "zip_code": "57084-000",
+      "phone": "(82) 3344-5678",
+      "email": "contato.benedito@saude.maceio.gov.br",
+      "website": "http://www.cs-benedito.saude.maceio.gov.br",
+      "latitude": -9.602722,
+      "longitude": -35.724715
+    },
+    {
+      "name": "Posto de Saúde Mangabeiras",
+      "type": "Posto de Saúde",
+      "schedules": [
+        { "start": "07:00:00", "end": "17:00:00", "weekday": "monday" },
+        { "start": "07:00:00", "end": "17:00:00", "weekday": "tuesday" },
+        { "start": "07:00:00", "end": "17:00:00", "weekday": "wednesday" },
+        { "start": "07:00:00", "end": "17:00:00", "weekday": "thursday" },
+        { "start": "07:00:00", "end": "16:00:00", "weekday": "friday" }
+      ],
+      "full_address": "Avenida Gustavo Paiva, 555",
+      "neighborhood": "Mangabeiras",
+      "city": "Maceió",
+      "state": "AL",
+      "zip_code": "57037-800",
+      "phone": "(82) 3355-1234",
+      "email": "contato.mangabeiras@saude.maceio.gov.br",
+      "website": "http://www.posto-mangabeiras.saude.maceio.gov.br",
+      "latitude": -9.648824,
+      "longitude": -35.709973
+    },
+    {
+        "name": "UBS Poço",
+        "type": "UBS",
+        "schedules": [
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "monday" },
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "tuesday" },
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "wednesday" },
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "thursday" },
+          { "start": "08:00:00", "end": "16:00:00", "weekday": "friday" }
+        ],
+        "full_address": "Rua do Comércio, 234",
+        "neighborhood": "Poço",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57025-200",
+        "phone": "(82) 3212-2345",
+        "email": "contato.poco@saude.maceio.gov.br",
+        "website": "http://www.ubs-poco.saude.maceio.gov.br",
+        "latitude": -9.664376,
+        "longitude": -35.728789
+      },
+      {
+        "name": "Posto de Saúde Tabuleiro dos Martins",
+        "type": "Posto de Saúde",
+        "schedules": [
+          { "start": "07:00:00", "end": "16:00:00", "weekday": "monday" },
+          { "start": "07:00:00", "end": "16:00:00", "weekday": "tuesday" },
+          { "start": "07:00:00", "end": "16:00:00", "weekday": "wednesday" },
+          { "start": "07:00:00", "end": "16:00:00", "weekday": "thursday" },
+          { "start": "07:00:00", "end": "15:00:00", "weekday": "friday" }
+        ],
+        "full_address": "Rua José Correia, 321",
+        "neighborhood": "Tabuleiro dos Martins",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57081-000",
+        "phone": "(82) 3341-6789",
+        "email": "contato.tabuleiro@saude.maceio.gov.br",
+        "website": "http://www.posto-tabuleiro.saude.maceio.gov.br",
+        "latitude": -9.592512,
+        "longitude": -35.764530
+      },
+      {
+        "name": "Clínica Popular de Cruz das Almas",
+        "type": "Clínica",
+        "schedules": [
+          { "start": "09:00:00", "end": "18:00:00", "weekday": "monday" },
+          { "start": "09:00:00", "end": "18:00:00", "weekday": "tuesday" },
+          { "start": "09:00:00", "end": "18:00:00", "weekday": "wednesday" },
+          { "start": "09:00:00", "end": "18:00:00", "weekday": "thursday" },
+          { "start": "09:00:00", "end": "17:00:00", "weekday": "friday" }
+        ],
+        "full_address": "Avenida Menino Marcelo, 654",
+        "neighborhood": "Cruz das Almas",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57038-000",
+        "phone": "(82) 3352-3456",
+        "email": "contato.cruzalmas@saude.maceio.gov.br",
+        "website": "http://www.clinica-cruzalmas.saude.maceio.gov.br",
+        "latitude": -9.621012,
+        "longitude": -35.712231
+      },
+      {
+        "name": "Hospital Universitário Professor Alberto Antunes",
+        "type": "Hospital Universitário",
+        "schedules": [
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "monday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "tuesday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "wednesday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "thursday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "friday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "saturday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "sunday" }
+        ],
+        "full_address": "Avenida Lourival Melo Mota, s/n",
+        "neighborhood": "Cidade Universitária",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57072-970",
+        "phone": "(82) 3221-6543",
+        "email": "contato.hupaa@saude.maceio.gov.br",
+        "website": "http://www.hupaa.saude.maceio.gov.br",
+        "latitude": -9.545932,
+        "longitude": -35.772320
+      },
+      {
+        "name": "Centro Médico Farol",
+        "type": "Centro Médico",
+        "schedules": [
+          { "start": "08:30:00", "end": "17:30:00", "weekday": "monday" },
+          { "start": "08:30:00", "end": "17:30:00", "weekday": "tuesday" },
+          { "start": "08:30:00", "end": "17:30:00", "weekday": "wednesday" },
+          { "start": "08:30:00", "end": "17:30:00", "weekday": "thursday" },
+          { "start": "08:30:00", "end": "16:30:00", "weekday": "friday" }
+        ],
+        "full_address": "Rua do Arraial, 789",
+        "neighborhood": "Farol",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57051-020",
+        "phone": "(82) 3371-6789",
+        "email": "contato.farol@saude.maceio.gov.br",
+        "website": "http://www.cm-farol.saude.maceio.gov.br",
+        "latitude": -9.654377,
+        "longitude": -35.737241
+      },
+      {
+        "name": "Policlínica Jacintinho",
+        "type": "Policlínica",
+        "schedules": [
+          { "start": "07:30:00", "end": "17:30:00", "weekday": "monday" },
+          { "start": "07:30:00", "end": "17:30:00", "weekday": "tuesday" },
+          { "start": "07:30:00", "end": "17:30:00", "weekday": "wednesday" },
+          { "start": "07:30:00", "end": "17:30:00", "weekday": "thursday" },
+          { "start": "07:30:00", "end": "16:30:00", "weekday": "friday" }
+        ],
+        "full_address": "Rua General Hermes, 456",
+        "neighborhood": "Jacintinho",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57041-010",
+        "phone": "(82) 3315-2345",
+        "email": "contato.jacintinho@saude.maceio.gov.br",
+        "website": "http://www.polijacintinho.saude.maceio.gov.br",
+        "latitude": -9.624839,
+        "longitude": -35.720563
+      },
+      {
+        "name": "Centro de Saúde Benedito Bentes",
+        "type": "Centro de Saúde",
+        "schedules": [
+          { "start": "08:00:00", "end": "18:00:00", "weekday": "monday" },
+          { "start": "08:00:00", "end": "18:00:00", "weekday": "tuesday" },
+          { "start": "08:00:00", "end": "18:00:00", "weekday": "wednesday" },
+          { "start": "08:00:00", "end": "18:00:00", "weekday": "thursday" },
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "friday" }
+        ],
+        "full_address": "Avenida Cachoeira do Meirim, 678",
+        "neighborhood": "Benedito Bentes",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57084-260",
+        "phone": "(82) 3322-3456",
+        "email": "contato.benedito@saude.maceio.gov.br",
+        "website": "http://www.centrobenedito.saude.maceio.gov.br",
+        "latitude": -9.522211,
+        "longitude": -35.717923
+      },
+      {
+        "name": "Hospital Geral do Estado de Alagoas",
+        "type": "Hospital",
+        "schedules": [
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "monday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "tuesday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "wednesday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "thursday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "friday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "saturday" },
+          { "start": "00:00:00", "end": "23:59:59", "weekday": "sunday" }
+        ],
+        "full_address": "Rua Gerson Carneiro, 800",
+        "neighborhood": "Trapiche da Barra",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57010-390",
+        "phone": "(82) 3311-1234",
+        "email": "contato.hge@saude.maceio.gov.br",
+        "website": "http://www.hge.saude.maceio.gov.br",
+        "latitude": -9.680936,
+        "longitude": -35.733982
+      },
+      {
+        "name": "UBS Ponta Verde",
+        "type": "UBS",
+        "schedules": [
+          { "start": "08:00:00", "end": "16:00:00", "weekday": "monday" },
+          { "start": "08:00:00", "end": "16:00:00", "weekday": "tuesday" },
+          { "start": "08:00:00", "end": "16:00:00", "weekday": "wednesday" },
+          { "start": "08:00:00", "end": "16:00:00", "weekday": "thursday" },
+          { "start": "08:00:00", "end": "15:00:00", "weekday": "friday" }
+        ],
+        "full_address": "Rua Deputado José Lages, 345",
+        "neighborhood": "Ponta Verde",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57035-230",
+        "phone": "(82) 3315-7890",
+        "email": "contato.pontaverde@saude.maceio.gov.br",
+        "website": "http://www.ubspontaverde.saude.maceio.gov.br",
+        "latitude": -9.661560,
+        "longitude": -35.709156
+      },
+      {
+        "name": "Posto de Saúde Gruta de Lourdes",
+        "type": "Posto de Saúde",
+        "schedules": [
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "monday" },
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "tuesday" },
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "wednesday" },
+          { "start": "08:00:00", "end": "17:00:00", "weekday": "thursday" },
+          { "start": "08:00:00", "end": "16:00:00", "weekday": "friday" }
+        ],
+        "full_address": "Avenida Dona Constança, 789",
+        "neighborhood": "Gruta de Lourdes",
+        "city": "Maceió",
+        "state": "AL",
+        "zip_code": "57052-100",
+        "phone": "(82) 3352-6789",
+        "email": "contato.gruta@saude.maceio.gov.br",
+        "website": "http://www.postogruta.saude.maceio.gov.br",
+        "latitude": -9.644027,
+        "longitude": -35.733021
+      }
+  ]
+  

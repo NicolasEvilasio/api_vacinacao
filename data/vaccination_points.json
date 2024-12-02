@@ -1,0 +1,158 @@
+[
+    {
+        "city_id": 1,
+        "name": "Centro de Vacinação Ponta Verde",
+        "schedules": [
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "monday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "tuesday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "wednesday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "thursday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "16:00:00",
+                "weekday": "friday"
+            }
+        ],
+        "full_address": "Rua Deputado José Lages, 345",
+        "neighborhood": "Ponta Verde",
+        "zip_code": "57035-230",
+        "phone": "(82) 3315-7890",
+        "email": "vacinacao.pontaverde@saude.maceio.gov.br",
+        "website": "http://vacinacao.maceio.al.gov.br",
+        "latitude": -9.661560,
+        "longitude": -35.709156
+    },
+    {
+        "city_id": 1,
+        "name": "Posto de Vacinação Jacintinho",
+        "schedules": [
+            {
+                "start": "07:00:00",
+                "end": "16:00:00",
+                "weekday": "monday"
+            },
+            {
+                "start": "07:00:00",
+                "end": "16:00:00",
+                "weekday": "tuesday"
+            },
+            {
+                "start": "07:00:00",
+                "end": "16:00:00",
+                "weekday": "wednesday"
+            },
+            {
+                "start": "07:00:00",
+                "end": "16:00:00",
+                "weekday": "thursday"
+            },
+            {
+                "start": "07:00:00",
+                "end": "15:00:00",
+                "weekday": "friday"
+            }
+        ],
+        "full_address": "Avenida Comendador Leão, 456",
+        "neighborhood": "Jacintinho",
+        "zip_code": "57041-090",
+        "phone": "(82) 3333-4567",
+        "email": "vacinacao.jacintinho@saude.maceio.gov.br",
+        "website": "http://vacinacao.maceio.al.gov.br",
+        "latitude": -9.655375,
+        "longitude": -35.727545
+    },
+    {
+        "city_id": 2,
+        "name": "Centro de Imunização Arapiraca",
+        "schedules": [
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "monday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "tuesday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "wednesday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "thursday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "16:00:00",
+                "weekday": "friday"
+            }
+        ],
+        "full_address": "Rua Principal, 123",
+        "neighborhood": "Centro",
+        "zip_code": "57300-000",
+        "phone": "(82) 3522-1234",
+        "email": "vacinacao@saude.arapiraca.al.gov.br",
+        "website": "http://vacinacao.arapiraca.al.gov.br",
+        "latitude": -9.752287,
+        "longitude": -36.661865
+    },
+    {
+        "city_id": 4,
+        "name": "Centro de Vacinação Salvador",
+        "schedules": [
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "monday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "tuesday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "wednesday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "17:00:00",
+                "weekday": "thursday"
+            },
+            {
+                "start": "08:00:00",
+                "end": "16:00:00",
+                "weekday": "friday"
+            }
+        ],
+        "full_address": "Avenida Sete de Setembro, 789",
+        "neighborhood": "Centro",
+        "zip_code": "40020-000",
+        "phone": "(71) 3333-5678",
+        "email": "vacinacao@saude.salvador.ba.gov.br",
+        "website": "http://vacinacao.salvador.ba.gov.br",
+        "latitude": -12.978889,
+        "longitude": -38.515755
+    }
+] 

@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Maceió",
+        "state_id": 1,
+        "ibge_code": "2704302"
+    },
+    {
+        "name": "Arapiraca",
+        "state_id": 1,
+        "ibge_code": "2700300"
+    },
+    {
+        "name": "Palmeira dos Índios",
+        "state_id": 1,
+        "ibge_code": "2706703"
+    },
+    {
+        "name": "Salvador",
+        "state_id": 2,
+        "ibge_code": "2927408"
+    },
+    {
+        "name": "Feira de Santana",
+        "state_id": 2,
+        "ibge_code": "2910800"
+    },
+    {
+        "name": "Vitória da Conquista",
+        "state_id": 2,
+        "ibge_code": "2933307"
+    }
+] 

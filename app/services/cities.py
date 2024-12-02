@@ -20,8 +20,8 @@ class CityService:
     def __init__(self, repository: CityRepository):
         self.repository = repository
 
-    async def get_all_cities(self, id: int | None = None, ibge_code: str | None = None) -> List[Dict]:
-        return await self.repository.get_all(id=id, ibge_code=ibge_code)
+    async def get_all_cities(self, id: int | None = None, name: str | None = None, ibge_code: str | None = None) -> List[Dict]:
+        return await self.repository.get_all(id=id, name=name, ibge_code=ibge_code)
 
     async def create_city(self, city: CityCreate) -> Dict:
         last_record_id = await self.repository.create(

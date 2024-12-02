@@ -10,7 +10,7 @@ Controllers should not contain business logic, only HTTP request
 handling logic.
 """
 
-from fastapi import APIRouter, Depends, Request, Form
+from fastapi import APIRouter, Depends, Request, Form, Query
 from typing import Annotated
 from app.schemas.cities import CityCreate
 from app.services.cities import CityService
@@ -23,16 +23,27 @@ router = APIRouter()
     "/cities",
     tags=["Cidades"],
     summary="Listar cidades",
-    description="Retorna todas as cidades cadastradas"
+    description="""
+    Retorna a lista de cidades cadastradas.
+    
+    Filtros disponíveis:
+    * ID da cidade
+    * Nome da cidade (busca parcial, não sensível a maiúsculas/minúsculas)
+    * Código IBGE
+    
+    Se nenhum filtro for fornecido, retorna todas as cidades.
+    """,
+    response_description="Lista de cidades"
 )
 @limiter.limit("10/minute")
 async def get_cities(
     request: Request,
-    id: int | None = None,
-    ibge_code: str | None = None,
+    id: int | None = Query(None, description="ID da cidade"),
+    name: str | None = Query(None, description="Nome da cidade (busca parcial)"),
+    ibge_code: str | None = Query(None, description="Código IBGE da cidade"),
     service: CityService = Depends(get_city_service)
 ):
-    return await service.get_all_cities(id=id, ibge_code=ibge_code)
+    return await service.get_all_cities(id=id, name=name, ibge_code=ibge_code)
 
 @router.post(
     "/cities",

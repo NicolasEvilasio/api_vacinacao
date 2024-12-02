@@ -67,3 +67,13 @@ def get_vaccination_point_vaccine_repository():
 def get_vaccination_point_vaccine_service():
     repository = get_vaccination_point_vaccine_repository()
     return VaccinationPointVaccineService(repository) 
+
+async def get_vaccination_point_vaccine_service():
+    repository = VaccinationPointVaccineRepository(database)
+    vaccination_point_repository = VaccinationPointRepository(database)
+    vaccine_repository = VaccineRepository(database)
+    return VaccinationPointVaccineService(
+        repository=repository,
+        vaccination_point_repository=vaccination_point_repository,
+        vaccine_repository=vaccine_repository
+    ) 

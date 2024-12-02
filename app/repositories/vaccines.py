@@ -11,7 +11,7 @@ access operations.
 """
 
 from databases import Database
-from sqlalchemy import select, insert
+from sqlalchemy import select, insert, update, delete
 from app.models import Vaccine
 from typing import List
 
@@ -30,11 +30,36 @@ class VaccineRepository:
         
         return await self.database.fetch_all(query)
 
+    async def get_by_id(self, id: int) -> Vaccine:
+        query = select(Vaccine).where(Vaccine.id == id)
+        return await self.database.fetch_one(query)
+
     async def create(
         self, 
-        name: str,
+        name: str
     ) -> int:
         query = insert(Vaccine).values(
-            name=name,
+            name=name
         )
-        return await self.database.execute(query) 
+        return await self.database.execute(query)
+
+    async def update(
+        self,
+        id: int,
+        data: dict
+    ) -> bool:
+        query = update(Vaccine).where(
+            Vaccine.id == id
+        ).values(**data)
+        result = await self.database.execute(query)
+        return result > 0
+
+    async def delete(
+        self,
+        id: int
+    ) -> bool:
+        query = delete(Vaccine).where(
+            Vaccine.id == id
+        )
+        result = await self.database.execute(query)
+        return result > 0 

@@ -1,24 +1,27 @@
 """
-This module contains the repository for the Vaccines resource.
-Repositories are responsible for:
-- Performing database operations
-- Implementing SQL queries
-- Mapping database results to models
-- Managing transactions
-
-The repository should not contain business logic, only data
-access operations.
+This module contains the repository for managing the relationship
+between vaccination points and vaccines.
 """
 
 from databases import Database
-from sqlalchemy import select, insert, join, delete, update
+from sqlalchemy import select, insert, delete, join
 from app.models import VaccinationPointVaccine, Vaccine, VaccinationPoint
 from typing import List, Dict
 
-
-class VaccinationPointVaccineRepository:   
+class VaccinationPointVaccineRepository:
     def __init__(self, database: Database):
         self.database = database
+
+    async def get_by_point_and_vaccine(
+        self,
+        vaccination_point_id: int,
+        vaccine_id: int
+    ) -> VaccinationPointVaccine:
+        query = select(VaccinationPointVaccine).where(
+            VaccinationPointVaccine.vaccination_point_id == vaccination_point_id,
+            VaccinationPointVaccine.vaccine_id == vaccine_id
+        )
+        return await self.database.fetch_one(query)
 
     async def get_vaccines_by_point(self, vaccination_point_id: int | None = None) -> List[Dict]:
         # Join com a tabela de vacinas
@@ -70,11 +73,11 @@ class VaccinationPointVaccineRepository:
     async def create(
         self, 
         vaccination_point_id: int,
-        vaccine_id: int,
+        vaccine_id: int
     ) -> int:
         query = insert(VaccinationPointVaccine).values(
             vaccination_point_id=vaccination_point_id,
-            vaccine_id=vaccine_id,
+            vaccine_id=vaccine_id
         )
         return await self.database.execute(query)
 
@@ -88,4 +91,6 @@ class VaccinationPointVaccineRepository:
             VaccinationPointVaccine.vaccine_id == vaccine_id
         )
         result = await self.database.execute(query)
-        return result > 0 
+        return result > 0
+
+    # ... outros métodos existentes ...

@@ -13,7 +13,8 @@ access operations.
 from databases import Database
 from sqlalchemy import select, insert, update, delete
 from app.models import VaccinationPoint
-from typing import List
+from typing import List, Optional
+from app.schemas.common import Schedule
 
 class VaccinationPointRepository:   
     def __init__(self, database: Database):
@@ -39,6 +40,7 @@ class VaccinationPointRepository:
         self, 
         city_id: int,
         name: str,
+        schedules: Optional[list[Schedule]] = None,
         full_address: str | None = None,
         neighborhood: str | None = None,
         zip_code: str | None = None,
@@ -48,9 +50,13 @@ class VaccinationPointRepository:
         latitude: float | None = None,
         longitude: float | None = None
     ) -> int:
+        # Converte a lista de Schedule para formato JSON
+        schedules_list = [schedule.model_dump() for schedule in schedules] if schedules else None
+        
         query = insert(VaccinationPoint).values(
             city_id=city_id,
             name=name,
+            schedules=schedules_list,
             full_address=full_address,
             neighborhood=neighborhood,
             zip_code=zip_code,

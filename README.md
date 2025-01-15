@@ -1,6 +1,8 @@
 # API de Vacinação
 
-API para gerenciamento de dados de vacinação no Brasil.
+API para gerenciamento de dados de vacinação no Brasil.  
+* Pode demorar alguns minutos para o site carregar no primeiro acesso, pois o servidor entra em hibernação.  
+https://api-vacinacao-0wzz.onrender.com/docs  
 
 ## Funcionalidades
 
